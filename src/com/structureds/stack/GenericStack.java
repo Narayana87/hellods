@@ -3,7 +3,7 @@ package com.structureds.stack;
 import java.util.ArrayList;
 
 public class GenericStack<E> {
-    private ArrayList<E> stackList = new ArrayList<>();
+    private final ArrayList<E> stackList = new ArrayList<>();
 
     //pushing element to the stack
     public void push(E element){
@@ -12,7 +12,7 @@ public class GenericStack<E> {
 
     //poping element from the list
 
-    public void po(){
+    public void pop(){
         if(!isEmpty()){
             stackList.remove(stackList.size() - 1);
         }else {
