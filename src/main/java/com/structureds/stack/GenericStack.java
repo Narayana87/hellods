@@ -1,8 +1,9 @@
 package com.structureds.stack;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
-public class GenericStack<E> {
+public class GenericStack<E> implements Iterable<E> {
     private final ArrayList<E> stackList = new ArrayList<>();
 
     //pushing element to the stack
@@ -29,12 +30,17 @@ public class GenericStack<E> {
 
     public void display(){
         if (!isEmpty()){
-            for (E e : stackList
-                 ) {
-                System.out.println(e.toString());
+            for (int i = size() - 1; i >= 0; i--){
+                System.out.println(stackList.get(i).toString());
             }
         }else {
-            System.out.println("Stack is Empty");
+            System.out.println("Stack is Empty.");
         }
+
+    }
+
+    @Override
+    public Iterator<E> iterator() {
+        return stackList.iterator();
     }
 }
