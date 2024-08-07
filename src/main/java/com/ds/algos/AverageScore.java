@@ -12,7 +12,7 @@ public class AverageScore {
                 {"Bob", "70"},
                 {"Chares", "22"}};
 
-        Map<String, Integer> resultMap = new HashMap<>();
+       // Map<String, Integer> resultMap = new HashMap<>();
         int avg = 0;
         int count = 0;
         for (String[] entry : my2DArray) {

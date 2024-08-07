@@ -27,7 +27,7 @@ public class HeapSort {
 
    //Building Heap
    public static void buildHeap(int[] a ){
-      size = a.length;
+      size = a.length - 1;
       for (int i = size / 2; i >= 0; i--){
          maxHeap(a, i);
       }
@@ -43,7 +43,7 @@ public class HeapSort {
          largest = i;
       }
 
-      if(right <= size-1 && a[right] > a[largest]){
+      if(right <= size && a[right] > a[largest]){
          largest = right;
       }
 
@@ -65,7 +65,7 @@ public class HeapSort {
       a = elements;
       buildHeap(a);
       for (int i = size; i > 0; i--){
-         swap(0, size - 1);
+         swap(0, size);
          size--;
          maxHeap(a, 0);
       }
